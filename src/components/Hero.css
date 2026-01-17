@@ -1,0 +1,37 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #0e476e, #042b42);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-card {
+  min-width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.character-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.character-card img:hover {
+  transform: scale(1.1);
+}

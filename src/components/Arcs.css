@@ -1,0 +1,108 @@
+.arcs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20px 50px;
+    background: radial-gradient(circle at center, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    box-sizing: border-box;
+}
+
+.arcs-header {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 30px;
+    color: #ffd700;
+    /* Gold */
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+.arcs-subheader {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffd700;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.world-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.world-map:hover {
+    transform: scale(1.02);
+}
+
+.arcs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.arc-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.arc-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: #ffd700;
+}
+
+.arc-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    opacity: 0.8;
+}
+
+.arc-content h3 {
+    margin: 0 0 8px 0;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.arc-content p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .arcs-grid {
+        grid-template-columns: 1fr;
+    }
+}
