@@ -35,3 +35,22 @@
 .character-card img:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 0 50px;
+  }
+
+  .character-container {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .character-card {
+    min-width: 250px;
+    height: 300px;
+  }
+}

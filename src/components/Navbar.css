@@ -71,6 +71,25 @@
   display: none !important;
 }
 
+/* ===== MENU ICON (Hamburger) ===== */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-icon .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffd700;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
 /* ===== NAV BUTTONS ===== */
 .nav-buttons {
   display: flex;
@@ -109,4 +128,77 @@
 .btn-fill:hover {
   background: transparent;
   color: #00ff88;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    background: transparent;
+    /* Match desktop view */
+    backdrop-filter: none;
+  }
+
+  .logo img {
+    width: 100px;
+    height: auto;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Animate hamburger to X */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: -100%;
+    /* Start from right */
+    width: 40%;
+    /* 40% width */
+    height: 50vh;
+    /* Half screen height */
+    background: transparent;
+    /* Match navbar color */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    /* Reduced gap for smaller height */
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 15px;
+    backdrop-filter: blur(10px);
+    /* Adding blur for better readability */
+  }
+
+  .nav-links.active {
+    right: 0;
+    /* Slide in to right */
+    left: auto;
+  }
+
+  .nav-links img {
+    /* Ensure no images inside nav-links break layout if any added later */
+    max-width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    /* Slightly smaller font for narrower menu */
+  }
 }

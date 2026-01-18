@@ -101,7 +101,19 @@
     line-height: 1.5;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .arcs-container {
+        padding: 80px 15px 40px;
+    }
+
+    .arcs-header {
+        font-size: 1.8rem;
+    }
+
+    .arcs-subheader {
+        font-size: 1.5rem;
+    }
+
     .arcs-grid {
         grid-template-columns: 1fr;
     }

@@ -73,3 +73,26 @@
     line-height: 1.8;
     color: #ddd;
 }
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 80px 15px 40px;
+    }
+
+    .about-header {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .about-info {
+        padding: 20px;
+    }
+
+    .about-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-info p {
+        font-size: 1rem;
+    }
+}
